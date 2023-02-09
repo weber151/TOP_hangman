@@ -46,13 +46,15 @@ module Hangman_Mechanics
             screengame
             # save_game(@word, @word_guess, @word_array, @letters, @guessed_letters)
         elsif /\A[lL]/.match?(load_or_new)
+            loadgames
             puts "loading game"
         end
     end
 
-    def loadgame
-
-        Dir.glob
+    def loadgames
+        saves_to_load = Dir.new("./Saves")
+        saves_to_load.entries.each {|entry| puts entry unless entry.match?(/\A[.]/) == true }
+    end
 
 end
 
