@@ -20,10 +20,12 @@ module Hangman_Display
         puts <<-DISPLAY
 
                     GUESS THE WORD
+                    #{@word}
 
-            Letters : #{@letters.to_s}
-            Guessed : #{@guessed_letters.to_s}
+            Letters : #{@letters}
+            Guessed : #{@guessed_letters}
         DISPLAY
+
     end
 end
 
